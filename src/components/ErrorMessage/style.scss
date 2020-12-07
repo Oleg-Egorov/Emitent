@@ -1,0 +1,37 @@
+$fontFamily: 'Arial';
+
+p {
+    font-family: $fontFamily;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    margin: 5px;
+
+    @media screen and (max-width: 1000px) {
+        font-size: 42px;
+        margin: 10px;
+    }
+
+    @media screen and (max-device-width: 600px) {
+        font-size: 68px;
+        margin: 26px;
+    }
+}
+
+.Error {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    &__SmallText {
+        font-size: 14px;
+
+        @media screen and (max-width: 1000px) {
+            font-size: 24px;
+        }
+
+        @media screen and (max-device-width: 600px) {
+            font-size: 38px;
+        }
+    }
+}

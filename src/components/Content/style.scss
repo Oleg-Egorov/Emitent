@@ -1,0 +1,25 @@
+.Content {
+    margin: 5px;
+    display: flex;
+
+    .Item {
+        height: 470px;
+        width: 400px;
+        margin: 0 10px;
+        display: flex;
+        flex-direction: column;
+        align-items : center;
+
+        &__OpenTxt {
+            color: gray;
+            font-family: MyriadPro_Light;
+        }
+    }
+
+    p {
+        font-family: MyriadPro_Regular;
+        margin: 5px;
+        font-size: 14px;
+    }
+    
+}
