@@ -1,8 +1,28 @@
-.Item_FirstList {   
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(192, 252, 252);
-    cursor: pointer;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+.Item {
+
+    &_FirstList {   
+        display: flex;
+        // padding: 10px;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0px 10px 10px 0px rgba(128, 128, 128, 0.3);
+        border-radius: 10px;
+        z-index: 1;
+        cursor: pointer;
+
+        &.open { 
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+
+    &__Row {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        p {
+            text-align: right;
+        }
+    }
 }
