@@ -22,7 +22,7 @@ const Content = ({onClick, data}) => {
                         onClick={() => onClick(id)}
                     /> 
                     : <p className='Item__OpenTxt'>
-                        Нажимите, чтобы развернуть
+                        Нажмите, чтобы развернуть
                     </p>
                 }
             </div>
