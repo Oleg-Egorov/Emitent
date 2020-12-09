@@ -20,12 +20,12 @@ const SecondList = ({dividend, trading, onClick}) => {
     let week = 1;
 
     trading.forEach((el, id, arr) => {
-        if (id % 5 === 0) {
+        if (id % 5 === 0 && arr[id].OPEN && arr[id+4].CLOSE) {
             const priceChange = Number((arr[id+4].CLOSE * 100 / arr[id].OPEN - 100).toFixed(1));
             if (priceChange !== Infinity) {
-                arrayCoords.push ({x: week++, y: priceChange})
+                arrayCoords.push ({x: week++, y: priceChange});
             } else {
-                arrayCoords.push ({x: week++, y: 0})
+                arrayCoords.push ({x: week++, y: 0});
             }
         }
     });
