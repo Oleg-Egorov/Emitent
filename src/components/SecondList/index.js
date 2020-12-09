@@ -6,9 +6,10 @@ import './style.scss';
 
 const SecondList = ({dividend, trading, onClick}) => {
 
-    const elements = dividend.map(({currencyid, registryclosedate, value}, id) => {
+    const elements = dividend.map(({isin, currencyid, registryclosedate, value}, id) => {
         return (
             <div className='Item__Row' key={id}>
+                <p> {isin} </p>
                 <p> {registryclosedate}: </p>
                 <p> {value} </p>
                 <p> {currencyid} </p>
@@ -38,6 +39,7 @@ const SecondList = ({dividend, trading, onClick}) => {
                     <p>Нет информации!</p> : 
                     <React.Fragment>
                         <div className='Item__Row'>
+                            <p>Трекер</p>
                             <p>Дата</p>
                             <p>Стоимость</p>
                             <p>Валюта</p>
